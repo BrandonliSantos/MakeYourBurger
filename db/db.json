@@ -79,16 +79,39 @@
   ],
   "burgers": [
     {
-      "nome": "Leonardo",
+      "nome": "asdasd",
       "carne": "Alcatra",
+      "pao": "Integral",
+      "opcionais": [
+        "Bacon",
+        "Cheddar",
+        "Tomate"
+      ],
+      "status": "Solicitado",
+      "id": 7
+    },
+    {
+      "nome": "Leonardo",
+      "carne": "Maminha",
+      "pao": "3 Queijos",
+      "opcionais": [
+        "Cheddar",
+        "Tomate"
+      ],
+      "status": "Solicitado",
+      "id": 8
+    },
+    {
+      "nome": "asdasd",
+      "carne": "Picanha",
       "pao": "Parmesão e Orégano",
       "opcionais": [
-        "Salame",
         "Bacon",
-        "Pepino"
+        "Cheddar",
+        "Cebola roxa"
       ],
-      "status": "Finalizado",
-      "id": 2
+      "status": "Solicitado",
+      "id": 9
     }
   ]
 }

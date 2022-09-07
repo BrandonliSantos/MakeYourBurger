@@ -75,6 +75,8 @@
                     status: "Solicitado"
                 }
 
+                if(!this.burgerValido(data)) return;
+
                 const dataJson = JSON.stringify(data);
 
                 const requisicao = await fetch("http://localhost:3000/burgers", {
@@ -87,8 +89,7 @@
 
                 console.log(resposta);
 
-                this.EnviarMensagemSucesso(resposta);
-                this.LimparMensagem();
+                this.EnviarMensagem(`Pedido N° ${resposta.id} realizado com sucesso`);
                 this.limparCampos();
 
             },
@@ -96,13 +97,23 @@
                 this.nome = "";
                 this.carne = "";
                 this.pao = "";
-                this.opcionais = "";
+                this.opcionais = [];
             },
-            EnviarMensagemSucesso(requisicao){
-                this.msg = `Pedido N° ${requisicao.id} realizado com sucesso`;
+            EnviarMensagem(msg){
+                this.msg = msg;
+                this.LimparMensagem();
             },
             LimparMensagem(){
                 setTimeout(() => this.msg = "", 3000);
+            },
+            burgerValido(formData){
+                if(!formData.nome || !formData.carne || !formData.pao)
+                {
+                    this.EnviarMensagem("Há informações que não foram preenchidas");
+                    return false;
+                } 
+                
+                return true;
             }
         },
         mounted(){
