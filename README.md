@@ -1,19 +1,3 @@
-# projeto_vue
+# MakeYourBurger
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Projeto desenvolvido para aprendizado de VueJS, desenvolvido no curso: [Curso de Vue 3](https://www.youtube.com/playlist?list=PLnDvRpP8BnezDglaAvtWgQXzsOmXUuRHL)
